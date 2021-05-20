@@ -34,7 +34,7 @@ public class Main {
         //Both archive the same thing but "switch" is shorter
 
 
-        char testing = 'G';
+        char testing = 'A';
         switch (testing) {
             case 'A':
                 System.out.println("Its an A");
@@ -54,10 +54,30 @@ public class Main {
             default:
                 System.out.println("Not found");
                 System.out.println("Its an " + testing);
+        }
 
+        //System.out.println("10000 at 2% interest = " + calculateInterest(100000, 2.0));
+
+        System.out.println("for-loop");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Loop " + i + " hello");
 
         }
 
+        System.out.println("Nummer erhöht sich");
+        for (int i = 2; i < 9; i++) {
+            System.out.println("10000 at " + i + "% interest = " + String.format("%.2f", calculateInterest(100000, i)));
+            // "String.format("%.2f" -> 2 Nachkommastellen
+        }
 
+        System.out.println("Nummer wird kleiner");
+        for (int i = 8; i > 1; i--) {
+            System.out.println("10000 at " + i + "% interest = " + String.format("%.2f", calculateInterest(100000, i)));
+            // "String.format("%.2f" -> 2 Nachkommastellen
+        }
+    }
+
+    public static double calculateInterest(double amount, double interestRate) {
+        return (amount * (interestRate / 100));
     }
 }
