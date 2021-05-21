@@ -3,6 +3,13 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        int count = 0;
+        while (count != 6) {
+            System.out.println("count value is " + count);
+            count++;
+        }
+
+        
         int value = 12;
         if (value == 1) {
             System.out.println("Value was 1");
@@ -75,6 +82,8 @@ public class Main {
             System.out.println("10000 at " + i + "% interest = " + String.format("%.2f", calculateInterest(100000, i)));
             // "String.format("%.2f" -> 2 Nachkommastellen
         }
+
+
     }
 
     public static double calculateInterest(double amount, double interestRate) {
